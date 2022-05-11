@@ -22,7 +22,11 @@ ADD www/data/index.html /var/lib/nginx/html/index.html
 #COPY docker/index.html /var/lib/nginx/html/index.html
 #COPY docker/50x.html /var/lib/nginx/html/50x.html
 
+WORKDIR /etc/nginx
+
 RUN chmod -R 755 /var/lib/nginx
+
+
 
 EXPOSE 8080
 CMD ["/usr/sbin/nginx"]
