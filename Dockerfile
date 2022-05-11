@@ -18,7 +18,7 @@ RUN apk update && \
 #WORKDIR /etc/nginx
 #COPY docker/nginx.conf /etc/nginx/nginx.conf
 ADD nginx.conf /etc/nginx/nginx.conf
-ADD www/index.html /var/lib/nginx/html/index.html
+ADD www/data/index.html /var/lib/nginx/html/index.html
 #COPY docker/index.html /var/lib/nginx/html/index.html
 #COPY docker/50x.html /var/lib/nginx/html/50x.html
 
